@@ -7,10 +7,11 @@
   <link href="src/style.css" rel="stylesheet"/>
 </head>
 <body>
-  <!--en-tete-->
-  <header class="flex items-center justify-between">
+  <main class="container mx-auto">
+    <!--en-tete-->
+  <header class="flex items-center justify-between pt-5">
     <nav>
-    <ul class="flex gab-5 text-gray-500">
+    <ul class="flex gap-5 text-gray-500">
       <li>BUSY Bar</li>
       <li><a href="#">Boutique</a> </li>
       <li><a href="#">Telechargements</a></li>
@@ -18,15 +19,16 @@
     </ul>
   </nav>
     <!--badge-->
-    <img src="dist/assets/image/badge.svg" alt="badge"/>
+    <img src="dist/assets/image/badge.svg" alt="badge" class="w-56 grayscale-100 hover:grayscale-0 duration-200 "/>
   </header>
   <!--corps-->
-  <main class= "h-screen flex justify-center mx-auto flex-col max-h-[550]">
+  <section class= "h-screen flex justify-center mx-auto flex-col max-h-[550]">
   <p> 
 <span class="font-bold text-xl">BUSY Bar </span>est un dispositif multi-ligne de productivite avec un ecran led pixelise. Miniteur de concentration avec fonction de blocage des distractions sur votre telephone et pc.Entierement personnalisable,open-source et pret pour la maison connectee.
   </p>
   <button class="bg-orange-500 text-white py-4 px-16 rounded-lg hover:bg-black duration-300 cursor-pointer mx-auto block">Acheter</button>
 
+</section>
 </main>
 </body>
 </html>
