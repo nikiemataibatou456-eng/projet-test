@@ -4,29 +4,193 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BUSY BAR-Landing Page Formation</title>
-  <link rel="stylesheet" crossorigin href="/nikiemataibatou456-eng/assets/index-BPIHhU49.css">
+  
+  <link rel="stylesheet" crossorigin href="/projet-test/assets/index-D0vzC6E9.css">
 </head>
 <body>
-  <!--en-tete-->
-  <header class="flex items-center justify-between">
-    <nav>
-    <ul class="flex gab-5 text-gray-500">
-      <li>BUSY Bar</li>
-      <li><a href="#">Boutique</a> </li>
-      <li><a href="#">Telechargements</a></li>
-      <li><a href="#">Blog</a></li>
+
+<main class="container mx-auto min-h-screen">
+  <!--video-->
+  <video src="dist/assets/image/assets/welcome.mp4" autoplay loop muted  playsinline class="fixed -z-20 object-cover w-full h-screen left-0 top-0 ">
+</video>
+<!-- Fond sombre de couverture (Ajout de transition pour l'opacité) -->
+<div id="menu-overlay" class="fixed inset-0 bg-black/50 z-40 hidden opacity-0 transition-opacity duration-300"></div>
+
+  <!-- En-tête -->
+  <header class="flex flex-row items-center justify-between px-6 py-5">
+    
+    <!-- Logo -->
+    <h1 class="text-2xl font-bold text-orange-500">BUSY Bar</h1>
+
+    <!-- Navigation Version Desktop (Correction des classes d'alignement) -->
+    <nav class="hidden md:block">
+      <ul class="flex flex-row gap-8 items-center text-white text-xl">
+        <li><a href="#" class="hover:text-orange-500 duration-300">Boutique</a></li>
+        <li><a href="#" class="hover:text-orange-500 duration-300">Téléchargements</a></li>
+        <li><a href="#" class="hover:text-orange-500 duration-300">Blog</a></li>
+      </ul>
+    </nav>
+
+    <!-- Badge Desktop -->
+    <div class="hidden md:block">
+      <img src="dist/assets/image/badge.svg" alt="badge" class="w-40 grayscale hover:grayscale-0 duration-300" />
+    </div>
+
+    <!-- Bouton hamburger (Correction : flex-col et gap-8 supprimés pour l'icône) -->
+    <button id="menu-btn" class="md:hidden p-2 text-white hover:text-orange-500 focus:outline-none z-50 transition-colors" aria-label="Ouvrir le menu">
+      <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8 pointer-events-none">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </header>
+
+  <!-- Menu Mobile Latéral (Changement de méthode d'animation : transform) -->
+  <nav id="mobile-menu" class="fixed top-0 left-0 z-50 w-72 h-screen bg-black/95 text-white transition-transform duration-300 -translate-x-full md:hidden border-r border-white/10">
+    <!-- Rappel du Logo dans le menu mobile -->
+    <div class="p-6 border-b border-white/10">
+      <span class="text-2xl font-bold text-orange-500">BUSY Bar</span>
+    </div>
+    
+    <ul class="flex flex-col gap-6 p-8 text-xl">
+      <li><a href="#" class="block py-2 hover:text-orange-500 transition-colors">Boutique</a></li>
+      <li><a href="#" class="block py-2 hover:text-orange-500 transition-colors">Téléchargements</a></li>
+      <li><a href="#" class="block py-2 hover:text-orange-500 transition-colors">Blog</a></li>
     </ul>
   </nav>
-    <!--badge-->
-    <img src="dist/assets/image/badge.svg" alt="badge"/>
-  </header>
-  <!--corps-->
-  <main class= "h-screen flex justify-center mx-auto flex-col max-h-[550]">
-  <p> 
-<span class="font-bold text-xl">BUSY Bar </span>est un dispositif multi-ligne de productivite avec un ecran led pixelise. Miniteur de concentration avec fonction de blocage des distractions sur votre telephone et pc.Entierement personnalisable,open-source et pret pour la maison connectee.
-  </p>
-  <button class="bg-orange-500 text-white py-4 px-16 rounded-lg hover:bg-black duration-300 cursor-pointer mx-auto block">Acheter</button>
 
+
+  <!--corps-->
+  <section class= "flex mt-[25vh] md:mt-[35vh] max-w-3xl  mx-auto justify-center items-center text-center px-6 flex-col max-h-[ 550px ] text-xl">
+  <p class="max-w-3xl mt-4"> 
+<span class="font-bold">BUSY Bar </span>est un dispositif multi-ligne de productivite avec un ecran led pixelise. Miniteur de concentration avec fonction de blocage des distractions sur votre telephone et pc.Entierement personnalisable,open-source et pret pour la maison connectee.
+  </p>
+  <button class="bg-orange-500 mt-8 text-white py-4 px-16 rounded-lg hover:bg-black duration-500 cursor-pointer mx-auto block">Acheter</button>
+
+</section>
 </main>
+<!--fonctionnalites-->
+
+<section class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-8 pb-5 opacity-80 mt-32">
+
+  <!--fonctionnalite une -->
+  <div class="flex items-start gap-8">
+<img src="dist/assets/image/assets/feature-one.svg" alt="Fonctionnalite numero deux" class="w-14"/>
+<div>
+  <h3 class="text-xl mb-1.5">Outil de productivite </h3>
+  <div> 
+    Blocage des distractions, message BUSY personnalise, miniteur de concentration, synchronisation multiplateforme
+  </div>
+</div>
+</div>
+<!--fonctionnalite deux-->
+<div class="flex items-start gap-8">
+<img src="dist/assets/image/assets/feature-two.svg" alt="Fonctionnalite numero une" class="w-14"/>
+<div>
+  <h3 class="text-xl mb-1.5"> Applications et integration</h3>
+  <div>
+    Biblihoteque d'application, connexion a des logiciels tiers, integrations avec les evenements de calendrier et les appels
+  </div>
+</div>
+</div>
+<!--fonctionnalite trois-->
+
+<div class="flex items-start gap-3">
+<img src="dist/assets/image/assets/feature-three.svg" alt="Fonctionnalite numero trois" class="w-14"/>
+<div>
+  <h3 class="text-xl mb-1.5">Support maison connectee</h3>
+  <div>
+    Connectez-vous a Google Home et Apple Home via le protocole Matter
+  </div>
+</div>
+</div>
+<!--fonctionnalite quatre-->
+<div class="flex items-start gap-8">
+<img src="dist/assets/image/assets/feature-four.svg" alt="Fonctionnalite numero quatre" class="w-14"/>
+<div>
+  <h3 class="text-xl mb-1.5">Pour les debutants</h3>
+  <div>
+    Biblihoteques, liens, parametres,tout ce que vous avez besoin 
+  </div>
+</div>
+</div>
+</section>
+
+<!--demo-->
+
+<section class="flex flex-col lg:flex-row min-h-screen">
+
+ <!--description-->
+
+<div class="w-full lg:w-1/2 p-6">
+<div>
+    <h2 class="text-3xl md:text-5xl font-bold">
+    Montrez que vous etes occupes
+  </h2>
+    <p class="text-base md:text-xl leading-8"> Empechez les autres d'interompre votre concentration profonde. L'ecran affiche que vous etes occupes et quand vous serez a nouveau disponible
+  </p>
+
+
+  <div class="flex items-end mt-10">
+   <img src="dist/assets/image/assets/demo-one.png" alt="Demo numero une" class="w-32 h-32 object-contain"/> 
+   <div>
+    <h3 class="text-xl">Activation instantane</h3>
+    <div class="text-sm mt-10"> Activez et desactivez le statut BUSY manuellement avec un large bouton. Fonctionne entierement hors lgne, sans logiciel supplementaire requis.</div>
+   </div>
+  </div>
+  </div>
+
+
+  <div class="flex items-end mt-5">
+   <img src="dist/assets/image/assets/demo-two.png" alt="Demo numero deux" class="md:w-32 md:h-32 w-20 h-20 object-contain"/> 
+   <div>
+    <h3 class="text-xl">Set timer</h3>
+    <div class="text-sm mt-1">Programmez votre propre temps
+</div>
+   </div>
+  </div>
+</div>
+
+
+
+
+<!--video-->
+<div class=" w-full lg:w-1/2 relative">
+ <video src="dist/assets/image/assets/busy.mp4" autoplay loop muted class="absolute -z-10 object-cover w-full h-screen">
+</video> 
+</div>
+</section>
+
+<script>
+
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const menuOverlay = document.getElementById('menu-overlay');
+const menuIcon = document.getElementById('menu-icon');
+
+function toggleMenu() {
+  const isOpen = !mobileMenu.classList.contains('-translate-x-full');
+
+  if (isOpen) {
+    // Fermer le menu
+    mobileMenu.classList.add('-translate-x-full');
+    menuOverlay.classList.add('opacity-0');
+    setTimeout(() => menuOverlay.classList.add('hidden'), 300); // Attend la fin de l'animation
+    menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>';
+  } else {
+    // Ouvrir le menu
+    mobileMenu.classList.remove('-translate-x-full');
+    menuOverlay.classList.remove('hidden');
+    // Petit délai pour déclencher la transition CSS d'opacité
+    setTimeout(() => menuOverlay.classList.remove('opacity-0'), 10);
+    menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>';
+  }
+}
+
+// Ouvrir/Fermer au clic sur le bouton ou sur le fond sombre
+menuBtn.addEventListener('click', toggleMenu);
+menuOverlay.addEventListener('click', toggleMenu);
+
+</script>
+
 </body>
 </html>
