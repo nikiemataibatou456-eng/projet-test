@@ -1,10 +1,12 @@
 {
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.2",
+    "@types/node": "^26.1.1",
+    "gh-pages": "^6.3.0",
     "tailwindcss": "^4.3.2"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "deploy": "npm run build && gh-pages -d dist"
   }
 }
